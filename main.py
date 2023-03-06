@@ -1,5 +1,6 @@
 import math
 #comment example
+#new test comment
 print("""Мультипарадигмальні мови програмування, Lab№1
 Андрій Фортус, ІКМ-221а, номер в списку 20""")
 for i in range(0,46):
