@@ -1,9 +1,10 @@
+EDUCATOR_NAME = 'Vladyslav Valerievich Ovsyanikov'
+
 # Info about the subject and the student
 print("""Multi-paradigm programming languages, Task №1
 Andrey Fortus, IKM-221a, №20""")
 
 # Info about the educator
-EDUCATOR_NAME = "Vladyslav Valerievich Ovsyanikov"
 name_list = [EDUCATOR_NAME for i in range(45)]
 print(name_list)
 
