@@ -1,7 +1,7 @@
 # Multi-paradigm programming languages, Task №4
 # Andrey Fortus IKM-221a
 
-GENERAL_INFO = 'Multi-paradigm programming languages, Task №2'
+GENERAL_INFO = 'Multi-paradigm programming languages, Task №4'
 STUDENT_INFO = 'Andrey Fortus IKM-221a'
 
 # info
