@@ -17,14 +17,14 @@ while True:
         z = float(input(TEMPLATE.format('z')))
         if z - pow(x, 3) / 3 == 0:
             print("z - pow(x, 3) / 3 shouldn't equal zero !")
+            break
         elif pow(z, 2) - math.fabs(pow(x, 2) / (z - pow(x, 3) / 3)) == 0:
             print("pow(z, 2) - math.fabs(pow(x, 2) / (z - pow(x, 3) / 3))) shouldn't equal zero!")
+            break
     except ValueError:
         print('Value Error! Try again!')
+        break
     else:
-        try:
-            y = z + x / (pow(z, 2) - math.fabs(pow(x, 2) / (z - pow(x, 3) / 3)))
-            print(f'y = {y}')
-            break
-        except ZeroDivisionError:
-            print('Division by zero ! Try another value')
+        y = z + x / (pow(z, 2) - math.fabs(pow(x, 2) / (z - pow(x, 3) / 3)))
+        print(f'y = {y}')
+        break
