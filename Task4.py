@@ -11,18 +11,23 @@ print(STUDENT_INFO)
 
 # function for Fibonacci numbers
 def fibonacci(n):
-    if n < 0:
-        print("n must be more then 0!")
-    elif n == 0:
+    if n == 0:
         return 0
-    elif n == 1 or n == 2:
+    elif n < 3:
         return 1
     else:
         return fibonacci(n-1) + fibonacci(n-2)
 
 
 # print n is the number of Fibonacci numbers
-n = int(input('Input number of Fibonacci numbers: '))
-print('Fibonacci numbers: ')
-for i in range(n):
-    print(f'{fibonacci(i)}, ', end='')
+try:
+    n = int(input('Input number of Fibonacci numbers: '))
+except ValueError:
+    print('Invalid value! Try again!')
+else:
+    if n <= 0:
+        print('number must be more then 0!')
+    elif n > 0:
+        print('Fibonacci numbers: ')
+        fib_list = [fibonacci(i) for i in range(n)]
+        print(fib_list)
