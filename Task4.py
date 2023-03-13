@@ -20,14 +20,10 @@ def fibonacci(n):
 
 
 # print n is the number of Fibonacci numbers
-try:
-    n = int(input('Input number of Fibonacci numbers: '))
-except ValueError:
-    print('Invalid value! Try again!')
-else:
-    if n <= 0:
-        print('number must be more then 0!')
-    elif n > 0:
-        print('Fibonacci numbers: ')
-        fib_list = [fibonacci(i) for i in range(n)]
-        print(fib_list)
+n = int(input('Input number of Fibonacci numbers: '))
+if n <= 0:
+    raise Exception('n must be more then 0')
+elif n > 0:
+    print('Fibonacci numbers: ')
+    fib_list = [fibonacci(i) for i in range(n)]
+    print(fib_list)
