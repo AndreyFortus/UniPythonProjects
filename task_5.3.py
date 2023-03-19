@@ -17,7 +17,11 @@ print(GENERAL_INFO)
 print(STUDENT_INFO)
 
 # find square root
-n = float(input('Input value: '))
-if n < 0:
-    raise Exception('value must be equal or greater than 0')
-print(f'Square {n} equal {square_root(n)}')
+try:
+    n = float(input('Input value: '))
+except ValueError:
+    print('Value must not be string!')
+else:
+    if n < 0:
+        raise Exception('value must be equal or greater than 0')
+    print(f'Square {n} equal {square_root(n)}')
