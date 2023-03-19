@@ -1,14 +1,5 @@
 # Multi-paradigm programming languages, task №5.3
 # Andrey Fortus IKM-221a
-import math
-
-GENERAL_INFO = 'Multi-paradigm programming languages, task №5.3'
-STUDENT_INFO = 'Andrey Fortus IKM-221a variant №20'
-
-# info
-print(GENERAL_INFO)
-print(STUDENT_INFO)
-
 
 # Square root function
 def square_root(a):
@@ -18,5 +9,15 @@ def square_root(a):
     return round(x, 3)
 
 
+GENERAL_INFO = 'Multi-paradigm programming languages, task №5.3'
+STUDENT_INFO = 'Andrey Fortus IKM-221a variant №20'
+
+# info
+print(GENERAL_INFO)
+print(STUDENT_INFO)
+
+# find square root
 n = float(input('Input value: '))
-print(f'Square {n} equal {square_root(n)}') if n >= 0 else print('Value must be greater than 0')
+if n < 0:
+    raise Exception('value must be equal or greater than 0')
+print(f'Square {n} equal {square_root(n)}')
