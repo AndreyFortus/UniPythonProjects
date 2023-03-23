@@ -16,6 +16,6 @@ STUDENT_INFO = 'Andrey Fortus IKM-221a variant №20'
 print(GENERAL_INFO)
 print(STUDENT_INFO)
 
-# finding the sum of a series
+# finding the sum
 n = 1
 sum_series(n)
