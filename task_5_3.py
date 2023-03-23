@@ -3,10 +3,10 @@
 
 # Square root function
 def square_root(a):
-    x = a
-    while abs(x * x - a) > 1e-8:
-        x = (x + a / x) / 2
-    return round(x, 3)
+    xi = a
+    while abs(xi * xi - a) > 1e-8:
+        xi = (xi + a / xi) / 2
+    return round(xi, 3)
 
 
 GENERAL_INFO = 'Multi-paradigm programming languages, task №5.3'

@@ -2,10 +2,10 @@
 # Andrey Fortus IKM-221a
 
 # digits counter
-def digits_counter(n):
+def digits_counter(ni):
     counter = 1
-    while abs(n) >= 10:
-        n /= 10
+    while abs(ni) >= 10:
+        ni /= 10
         counter += 1
     return counter
 
