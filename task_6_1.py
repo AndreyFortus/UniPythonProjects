@@ -4,6 +4,7 @@ with open('C:/Users/Andrii/Desktop/numbers.txt', 'r') as inp, open('C:/Users/And
         try:
             num = float(line)
             total += num
+
         except ValueError:
             print('{} is not a number!'.format(line))
     outp.write(format(total))
