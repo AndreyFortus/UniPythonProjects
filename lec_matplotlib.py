@@ -25,7 +25,8 @@ plt.yticks([100000, 200000, 300000, 400000, 500000])
 
 # task 2
 fig2, ax2 = plt.subplots()
-ax2.plot(month_list, profit_list, ls='--', color='red', lw=3, marker='o', markerfacecolor='black', label='Profit data of last year')
+ax2.plot(month_list, profit_list, ls='--', color='red', lw=3, marker='o', markerfacecolor='black',
+         label='Profit data of last year')
 ax2.set_title('Company Sales data of last year')
 ax2.set_xlabel('Month number')
 ax2.set_ylabel('Sold units number')
@@ -64,8 +65,10 @@ ax4.legend(loc=2)
 # task 5
 fig5, ax5 = plt.subplots()
 ax5.set_title('Facewash and facecream sales data')
-ax5.bar([x - 0.25 for x in month_list], facecream_list, width=0.25, align='edge', color='#0066CC', label='Face Cream sales data')
-ax5.bar([x + 0.25 for x in month_list], facewash_list, width=-0.25, align='edge', color='#FF8000', label='Face Wash sales data')
+ax5.bar([x - 0.25 for x in month_list], facecream_list, width=0.25, align='edge', color='#0066CC',
+        label='Face Cream sales data')
+ax5.bar([x + 0.25 for x in month_list], facewash_list, width=-0.25, align='edge', color='#FF8000',
+        label='Face Wash sales data')
 ax5.grid(ls='--')
 ax5.set_xlabel('Month number')
 ax5.set_ylabel('Sales units in number')
