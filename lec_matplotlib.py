@@ -103,7 +103,7 @@ ax7.legend(loc=2)
 fig8, ax8 = plt.subplots()
 ax8.set_title('Sales data')
 labels = ['Facecream', 'Facewash', 'Toothpaste', 'Bathing soap', 'Shampoo', 'Moisturizer']
-sales_data = [data ['facecream'].sum(), data['facewash'].sum(),
+sales_data = [data['facecream'].sum(), data['facewash'].sum(),
               data['toothpaste'].sum(), data['bathingsoap'].sum(),
               data['shampoo'].sum(), data['moisturizer'].sum()]
 ax8.pie(sales_data, labels=labels, autopct='%1.1f%%')
