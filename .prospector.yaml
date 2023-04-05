@@ -14,7 +14,7 @@ pep8:
     # style checking
     run: true
     options:
-        max-line-length: 100
+        max-line-length: 130
 
 pylint:
     # static analysis and then some
