@@ -1,4 +1,4 @@
-with open('C:/Users/Andrii/Desktop/guest_book.txt', 'w') as guest_b:
+with open('C:/Users/Andrii/Desktop/guest_book.txt', 'w', encoding='utf-8') as guest_b:
     while True:
         username = input('(Input \'exit\' to stop program) Input your name:')
         if username == 'exit':
