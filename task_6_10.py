@@ -20,13 +20,13 @@ with open('imdb.csv', 'r', newline='', encoding='utf-8') as csvfile:
 # save changes in DB
 conn.commit()
 
-print("Усі записи у таблиці ratings:")
-result = conn.execute("SELECT * FROM ratings ORDER BY title")
+print('ratings:')
+result = conn.execute('SELECT * FROM ratings ORDER BY title')
 for row in result:
     print(row)
 
-print("\nЗаписи у таблиці ratings з ретингом більшим за 8.70:")
-result = conn.execute("SELECT * FROM ratings WHERE rating > 8.70")
+print('\ndata in ratings > 8.70:')
+result = conn.execute('SELECT * FROM ratings WHERE rating > 8.70')
 for row in result:
     print(row)
 
