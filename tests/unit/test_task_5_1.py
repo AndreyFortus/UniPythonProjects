@@ -6,4 +6,3 @@ def test_sum():
     actual = sum_series(input_param)
     expected = 3.4999
     assert actual == expected
-
