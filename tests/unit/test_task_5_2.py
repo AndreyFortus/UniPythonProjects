@@ -1,4 +1,4 @@
-from task_5_2 import digits_counter
+from lab_5.task_5_2 import digits_counter
 
 
 def test_counter():

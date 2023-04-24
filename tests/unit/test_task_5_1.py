@@ -1,4 +1,4 @@
-from task_5_1 import sum_series
+from lab_5.task_5_1 import sum_series
 
 
 def test_sum():

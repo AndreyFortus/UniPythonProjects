@@ -1,4 +1,4 @@
-from task_5_3 import square_root
+from lab_5.task_5_3 import square_root
 
 
 def test_square():
