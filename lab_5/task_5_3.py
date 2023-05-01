@@ -16,6 +16,7 @@ STUDENT_INFO = 'Andrey Fortus IKM-221a variant №20'
 print(GENERAL_INFO)
 print(STUDENT_INFO)
 
+
 # find square root
 try:
     n = float(input('Input value: '))

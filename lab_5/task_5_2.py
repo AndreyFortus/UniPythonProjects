@@ -2,7 +2,8 @@
 # Andrey Fortus IKM-221a
 
 # digits counter
-def digits_counter(ni):
+def digits_counter():
+    ni = int(input('Input n value: '))
     counter = 1
     while abs(ni) >= 10:
         ni /= 10
@@ -19,6 +20,4 @@ print(STUDENT_INFO)
 
 
 # find digits counter
-def main():
-    n = int(input('Input n value: '))
-    print(f'Digits in n = {digits_counter(n)}')
+print(digits_counter())
