@@ -17,6 +17,8 @@ STUDENT_INFO = 'Andrey Fortus IKM-221a variant №20'
 print(GENERAL_INFO)
 print(STUDENT_INFO)
 
+
 # find digits counter
-n = int(input('Input n value: '))
-print(f'Digits in n = {digits_counter(n)}')
+def main():
+    n = int(input('Input n value: '))
+    print(f'Digits in n = {digits_counter(n)}')
