@@ -22,4 +22,3 @@ jobs:
       - name: linter
         run:
           prospector --profile .prospector.yaml
-
