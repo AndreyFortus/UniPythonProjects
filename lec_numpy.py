@@ -45,14 +45,14 @@ np9_b = np.where(np9_a < 10, 10, np.where(np9_a > 30, 30, np9_a))
 print('\ntask 47\n', np9_b)
 
 # this task isn't solved by me, task use as example how to work with links
-url25 = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
-iris = np.genfromtxt(url25, delimiter=',', dtype='object')
+URL_25 = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+iris = np.genfromtxt(URL_25, delimiter=',', dtype='object')
 names = ('sepallength', 'sepalwidth', 'petallength', 'petalwidth', 'species')
 print('\ntask №25\n', iris[: 3])
 
 # level №3
-url34 = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
-iris_2d = np.genfromtxt(url34, delimiter=',', dtype='float', usecols=[0, 1, 2, 3])
+URL_34 = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+iris_2d = np.genfromtxt(URL_34, delimiter=',', dtype='float', usecols=[0, 1, 2, 3])
 filt_rows = (iris_2d[:, 2] > 1.5) & (iris_2d[:, 0] < 5.0)
 print('\ntask №34\n', iris_2d[filt_rows])
 
