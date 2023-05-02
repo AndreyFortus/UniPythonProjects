@@ -21,7 +21,7 @@ def fibonacci(n_value):
 # print n is the number of Fibonacci numbers
 n = int(input('Input number of Fibonacci numbers: '))
 if n <= 0:
-    raise Exception('n must be more then 0')
+    raise ValueError('n must be more then 0')
 
 print('Fibonacci numbers: ')
 fib_list = [fibonacci(i) for i in range(n)]
