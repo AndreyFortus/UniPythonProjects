@@ -14,13 +14,13 @@ pep8:
     # style checking
     run: true
     options:
-        max-line-length: 130
+        max-line-length: 100
 
 pylint:
     # static analysis and then some
     run: true
     options:
-        max-line-length: 130
+        max-line-length: 100
         # allow 'log' as global constant
         const-rgx: "(([A-Z_][A-Z0-9_]*)|(__.*__)|log)$"
         const-hint: "(([A-Z_][A-Z0-9_]*)|(__.*__)|log)$"
@@ -36,3 +36,7 @@ pylint:
         # Used builtin function 'filter'.
         # (For maintainability, one should prefer list comprehension.)
         - W0141
+        # Missing-timeout argument
+        - W3101
+        # Override method
+        - W0221
