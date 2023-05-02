@@ -10,7 +10,7 @@ class BmwSpider(scrapy.Spider):
             yield response.follow(link, callback=self.parse_bmw)
 
     def parse_bmw(self, response):
-        yield{
+        yield {
             'name': response.css('div#product.col-md-12.clear.gody-main-block h1::text').get(),
             'code': response.css('span.say-num::text').get() + response.css('span.num::text').get()
         }
