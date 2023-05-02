@@ -37,12 +37,18 @@ ax2.legend(loc=4)
 # task 3
 fig3, ax3 = plt.subplots()
 ax3.set_title('Sales data')
-ax3.plot(month_list, facecream_list, ls='-', color='#FF0000', lw=3, marker='o', label='Face cream Sales Data')
-ax3.plot(month_list, facewash_list, ls='-', color='#00CC00', lw=3, marker='o', label='Face wash Sales Data')
-ax3.plot(month_list, toothpaste_list, ls='-', color='#0080FF', lw=3, marker='o', label='Toothpaste Sales Data')
-ax3.plot(month_list, bathingsoap_list, ls='-', color='#B266FF', lw=3, marker='o', label='Bathing soap Sales Data')
-ax3.plot(month_list, shampoo_list, ls='-', color='#FF8000', lw=3, marker='o', label='Shampoo Sales Data')
-ax3.plot(month_list, moisturizer_list, ls='-', color='#660000', lw=3, marker='o', label='Moisturizer Sales Data')
+ax3.plot(month_list, facecream_list, ls='-', color='#FF0000', lw=3,
+         marker='o', label='Face cream Sales Data')
+ax3.plot(month_list, facewash_list, ls='-', color='#00CC00', lw=3,
+         marker='o', label='Face wash Sales Data')
+ax3.plot(month_list, toothpaste_list, ls='-', color='#0080FF', lw=3,
+         marker='o', label='Toothpaste Sales Data')
+ax3.plot(month_list, bathingsoap_list, ls='-', color='#B266FF', lw=3,
+         marker='o', label='Bathing soap Sales Data')
+ax3.plot(month_list, shampoo_list, ls='-', color='#FF8000', lw=3,
+         marker='o', label='Shampoo Sales Data')
+ax3.plot(month_list, moisturizer_list, ls='-', color='#660000', lw=3,
+         marker='o', label='Moisturizer Sales Data')
 ax3.set_xlabel('Month number')
 ax3.set_ylabel('Sales units in number')
 plt.xticks(month_list)
@@ -53,7 +59,8 @@ ax3.legend(loc=2)
 # task 4
 fig4, ax4 = plt.subplots()
 ax4.set_title('Tooth paste Sales data')
-ax4.plot(month_list, toothpaste_list, ls=' ', color='#0080FF', lw=3, marker='o', label='Tooth paste Sales Data')
+ax4.plot(month_list, toothpaste_list, ls=' ', color='#0080FF', lw=3,
+         marker='o', label='Tooth paste Sales Data')
 ax4.grid(ls='--')
 ax4.set_xlabel('Month number')
 ax4.set_ylabel('Number of units Sold')
@@ -111,9 +118,11 @@ ax8.legend(loc=4)
 
 # task 9
 fig9, ax9 = plt.subplots(2)
-ax9[0].plot(month_list, bathingsoap_list, color='#000000', marker='o', lw=3, label='Bathingsoap Sales Data')
+ax9[0].plot(month_list, bathingsoap_list, color='#000000', marker='o', lw=3,
+            label='Bathingsoap Sales Data')
 ax9[0].set_title('Sales data of a Bathingsoap')
-ax9[1].plot(month_list, facewash_list, color='#FF0000', marker='o', lw=3, label='Face wash Sales Data')
+ax9[1].plot(month_list, facewash_list, color='#FF0000', marker='o', lw=3,
+            label='Face wash Sales Data')
 ax9[1].set_title('Sales data of a facewash')
 
 plt.xticks(month_list)
@@ -129,8 +138,8 @@ ax10.plot([], [], color='k', label='bathing soap', linewidth=4)
 ax10.plot([], [], color='g', label='shampoo', linewidth=4)
 ax10.plot([], [], color='y', label='moisturizer', linewidth=4)
 
-ax10.stackplot(month_list, facecream_list, facewash_list, toothpaste_list, bathingsoap_list, shampoo_list,
-               moisturizer_list, colors=['m', 'c', 'r', 'k', 'g', 'y'])
+ax10.stackplot(month_list, facecream_list, facewash_list, toothpaste_list, bathingsoap_list,
+               shampoo_list, moisturizer_list, colors=['m', 'c', 'r', 'k', 'g', 'y'])
 ax10.set_xlabel('Month number')
 ax10.set_ylabel('Sales units in Number')
 ax10.set_title('All product sales data using stack plot')
