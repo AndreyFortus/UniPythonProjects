@@ -10,4 +10,8 @@ def total_count(total):
         return f'Total of all numbers: {total}'
 
 
-print(total_count(0))
+def main():
+    print(total_count(0))
+
+
+main()
