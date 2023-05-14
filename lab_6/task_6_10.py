@@ -16,7 +16,7 @@ def database():
         reader = csv.reader(csvfile)
         next(reader)  # skip title
         for row in reader:
-            conn.execute("INSERT INTO ratings (title, year, rating) VALUES (?, ?, ?)",
+            conn.execute('INSERT INTO ratings (title, year, rating) VALUES (?, ?, ?)',
                          (row[1], int(row[2]), float(row[3])))
 
     # save changes in DB
