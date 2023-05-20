@@ -6,7 +6,7 @@ def total_count(total):
                 total += float(line)
             except ValueError:
                 print(f'{line} not a number!')
-        outp.write(format(total))
+        outp.write(total)
         return f'Total of all numbers: {total}'
 
 
