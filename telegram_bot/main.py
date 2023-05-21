@@ -21,7 +21,7 @@ def handle_response(text: str) -> str:
     processed: str = text.lower()
 
     if 'hello there' in processed:
-        return 'Obi-Wan Kenobi'
+        return 'General Kenobi'
 
     if 'how are you' in processed:
         return 'I am good!'
