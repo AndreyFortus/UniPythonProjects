@@ -5,6 +5,7 @@ ignore:
   - ^docs/
   - ^build/
   - venv
+  - gui_race_game
 
 test-warnings: true
 
