@@ -1,11 +1,12 @@
+import os
 from typing import Final
 
 from telegram import Update
 from telegram.ext import ContextTypes, MessageHandler, filters, CommandHandler, Application
 
-import api_key as keys
+import api_key
 
-TOKEN: Final = keys.API_KEY
+TOKEN: Final = os.environ.get('API_KEY')
 BOT_USERNAME: Final = '@KRAKEN'
 
 
