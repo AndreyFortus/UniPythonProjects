@@ -17,4 +17,5 @@ def month_check():
             return year_check(year)
 
 
-print(month_check())
+if __name__ == '__main__':
+    print(month_check())

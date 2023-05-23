@@ -9,4 +9,5 @@ def figure(sides, figure_list):
     return 'for the correct operation of the program, the number of sides must be 3-6'
 
 
-print(figure(3, LIST_FIGURES))
+if __name__ == '__main__':
+    print(figure(3, LIST_FIGURES))

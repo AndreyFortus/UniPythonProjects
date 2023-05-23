@@ -4,18 +4,14 @@ import random
 def game():
     while True:
         text = input('Rock, paper or scissor? (print \'exit\' to end game) ').lower()
-        computer_choice = random.choice(["Rock", "Paper", "Scissors"])
-        if text == computer_choice:
-            result = "Tie"
-        elif text == "rock" and computer_choice == "Scissors" or\
-                text == "paper" and computer_choice == "Rock" or\
-                text == "scissors" and computer_choice == "Paper":
-            result = "Player wins"
+        if text in ['scissor', 'rock', 'paper']:
+            result = random.choice(['Win', 'Draw', 'Lose'])
+            print(result)
         elif text == 'exit':
             return 'Thx for playing!'
-        else:
-            result = "Computer wins"
-        print(result)
+        elif text not in ['scissor', 'rock', 'paper']:
+            print('Input correct value!')
 
 
-print(game())
+if __name__ == '__main__':
+    print(game())

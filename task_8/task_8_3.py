@@ -21,4 +21,5 @@ def main():
     print(numbers(list_numbers))
 
 
-main()
+if __name__ == '__main__':
+    main()

@@ -8,4 +8,5 @@ def check_num():
             print('Incorrect value. Try again!')
 
 
-print(check_num())
+if __name__ == '__main__':
+    print(check_num())

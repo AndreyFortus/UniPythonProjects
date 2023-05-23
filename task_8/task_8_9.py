@@ -24,4 +24,5 @@ def money():
     return 'Nominal not found. Try another'
 
 
-print(money())
+if __name__ == '__main__':
+    print(money())

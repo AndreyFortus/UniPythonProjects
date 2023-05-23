@@ -13,4 +13,5 @@ def count_numbers():
             print('Your input is incorrect! Must be integer value.')
 
 
-print(count_numbers())
+if __name__ == '__main__':
+    print(count_numbers())

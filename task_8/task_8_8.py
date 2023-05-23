@@ -23,4 +23,5 @@ def calculator():
     return 'Error!'
 
 
-print(calculator())
+if __name__ == '__main__':
+    print(calculator())
