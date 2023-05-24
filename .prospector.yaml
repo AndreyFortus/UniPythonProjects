@@ -7,6 +7,7 @@ ignore:
   - venv
   - gui_race_game
   - detect_face_OpenCV
+  - telegram_bot
 
 test-warnings: true
 
