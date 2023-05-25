@@ -9,8 +9,8 @@ def month_check():
         'april': 30, 'june': 30, 'september': 30, 'november': 30
     }
     while True:
-        month = input('Input month for more info: ')
-        if month.lower() in month_dict:
+        month = input('Input month for more info: ').lower()
+        if month in month_dict:
             return f'in {month} {month_dict[month]} days'
         if month.lower() == 'february':
             year = int(input('Input year: '))

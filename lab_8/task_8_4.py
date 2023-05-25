@@ -5,7 +5,7 @@ def check_num():
             return f'{num} is even' if num % 2 == 0 else f'{num} is odd'
 
         except ValueError:
-            print('Incorrect value. Try again!')
+            return 'Incorrect value. Try again!'
 
 
 if __name__ == '__main__':

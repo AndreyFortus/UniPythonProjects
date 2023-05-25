@@ -14,12 +14,9 @@ def money():
 
     }
 
-    try:
-        nominal = int(input('Input nominal: '))
-        if nominal in money_dict:
-            return f'{money_dict[nominal]} is depicted on {nominal} hryvnias'
-    except ValueError:
-        return 'Incorrect nominal! Try again'
+    nominal = int(input('Input nominal: '))
+    if nominal in money_dict:
+        return f'{money_dict[nominal]} is depicted on {nominal} hryvnias'
 
     return 'Nominal not found. Try another'
 
