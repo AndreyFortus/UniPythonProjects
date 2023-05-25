@@ -1,11 +1,11 @@
 import re
 
-import const_file
+import constants
 
 
 def chapters_list():
-    with open(const_file.PATH + 'rob_crusoe.txt', 'r', encoding='utf-8') as r_crusoe,\
-         open(const_file.PATH + 'chapters.txt', 'w', encoding='utf-8') as list_chapters:
+    with open(constants.PATH + 'rob_crusoe.txt', 'r', encoding='utf-8') as r_crusoe,\
+         open(constants.PATH + 'chapters.txt', 'w', encoding='utf-8') as list_chapters:
         text = r_crusoe.read()
         pattern = r"CHAPTER [IVX]+—[A-Z ]+"
         chapters = re.findall(pattern, text)
@@ -14,4 +14,5 @@ def chapters_list():
             list_chapters.write(f'chapter \n')
 
 
-chapters_list()
+if __name__ == '__main__':
+    chapters_list()

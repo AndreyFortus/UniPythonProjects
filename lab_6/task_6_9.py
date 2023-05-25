@@ -1,8 +1,8 @@
-import const_file
+import constants
 
 
 def percent_count():
-    with open(const_file.PATH + 'mon_cristo.txt', 'r', encoding='utf-8') as m_cristo:
+    with open(constants.PATH + 'mon_cristo.txt', 'r', encoding='utf-8') as m_cristo:
         text = m_cristo.read()
         total_chars = len(text)
         num_upper = sum(1 for char in text if char.isalpha() and char.isupper())
@@ -13,4 +13,5 @@ def percent_count():
         print(f'Upper letters in text= {percent_upper}% \nLower letters in text= {percent_lower}%')
 
 
-percent_count()
+if __name__ == '__main__':
+    percent_count()

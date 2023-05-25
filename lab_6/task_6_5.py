@@ -1,8 +1,8 @@
-import const_file
+import constants
 
 
 def user_list():
-    with open(const_file.PATH + 'guest_book.txt', 'w', encoding='utf-8') as guest_b:
+    with open(constants.PATH + 'guest_book.txt', 'w', encoding='utf-8') as guest_b:
         username = None
         while username != 'exit':
             username = input('(Input \'exit\' to stop program) Input your name:')
@@ -13,4 +13,5 @@ def user_list():
         print('Thx for use our program!')
 
 
-user_list()
+if __name__ == '__main__':
+    user_list()

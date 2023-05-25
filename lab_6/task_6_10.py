@@ -35,4 +35,5 @@ def database():
     conn.close()
 
 
-database()
+if __name__ == '__main__':
+    database()

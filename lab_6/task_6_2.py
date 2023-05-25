@@ -1,10 +1,12 @@
-import const_file
+import constants
+from utils import int_checker
 
 
 def number_check():
-    number = int(input('Input integer value: '))
-    with open(const_file.PATH + 'task_6_2.txt', 'w', encoding='utf-8') as file:
+    number = int_checker()
+    with open(constants.PATH + 'task_6_2.txt', 'w', encoding='utf-8') as file:
         file.write(f"number {number} is {'even' if number % 2 == 0 else 'odd'}")
 
 
-number_check()
+if __name__ == '__main__':
+    number_check()

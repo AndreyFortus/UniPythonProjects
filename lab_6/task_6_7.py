@@ -1,10 +1,11 @@
-import const_file
+import constants
 
 
 def replace_symbol():
-    with open(const_file.PATH + 'book1.txt', 'r', encoding='utf-8') as book,\
-         open(const_file.PATH + 'formatted_text.txt', 'w', encoding='utf-8') as fbook:
+    with open(constants.PATH + 'book1.txt', 'r', encoding='utf-8') as book,\
+         open(constants.PATH + 'formatted_text.txt', 'w', encoding='utf-8') as fbook:
         fbook.write(book.read().replace(' ', '_'))
 
 
-replace_symbol()
+if __name__ == '__main__':
+    replace_symbol()
