@@ -1,10 +1,10 @@
-import constants
+import lab_6.constants
 
 
 def total_count():
     total = 0
-    with open(constants.PATH + 'numbers.txt', 'r', encoding='utf-8') as inp, \
-            open(constants.PATH + 'sum_numbers.txt', 'w', encoding='utf-8') as outp:
+    with open(lab_6.constants.PATH + 'numbers.txt', 'r', encoding='utf-8') as inp, \
+            open(lab_6.constants.PATH + 'sum_numbers.txt', 'w', encoding='utf-8') as outp:
 
         for line in inp:
             try:

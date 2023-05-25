@@ -1,8 +1,8 @@
-import constants
+import lab_6.constants
 
 
 def user_list():
-    with open(constants.PATH + 'guest_book.txt', 'w', encoding='utf-8') as guest_b:
+    with open(lab_6.constants.PATH + 'guest_book.txt', 'w', encoding='utf-8') as guest_b:
         username = None
         while username != 'exit':
             username = input('(Input \'exit\' to stop program) Input your name:')

@@ -1,8 +1,8 @@
-import constants
+import lab_6.constants
 
 
 def percent_count():
-    with open(constants.PATH + 'mon_cristo.txt', 'r', encoding='utf-8') as m_cristo:
+    with open(lab_6.constants.PATH + 'mon_cristo.txt', 'r', encoding='utf-8') as m_cristo:
         text = m_cristo.read()
         total_chars = len(text)
         num_upper = sum(1 for char in text if char.isalpha() and char.isupper())

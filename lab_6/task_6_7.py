@@ -1,9 +1,9 @@
-import constants
+import lab_6.constants
 
 
 def replace_symbol():
-    with open(constants.PATH + 'book1.txt', 'r', encoding='utf-8') as book,\
-         open(constants.PATH + 'formatted_text.txt', 'w', encoding='utf-8') as fbook:
+    with open(lab_6.constants.PATH + 'book1.txt', 'r', encoding='utf-8') as book,\
+         open(lab_6.constants.PATH + 'formatted_text.txt', 'w', encoding='utf-8') as fbook:
         fbook.write(book.read().replace(' ', '_'))
 
 
