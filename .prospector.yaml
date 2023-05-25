@@ -5,6 +5,8 @@ ignore:
   - ^docs/
   - ^build/
   - venv
+  - gui_race_game
+  - telegram_bot
 
 test-warnings: true
 
