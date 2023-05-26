@@ -10,7 +10,7 @@ def percent_count():
         percent_upper = round(num_upper / total_chars * 100, 2)
         percent_lower = 100 - percent_upper
 
-        print(f'Upper letters in text= {percent_upper}% \nLower letters in text= {percent_lower}%')
+        return f'Upper letters in text= {percent_upper}% \nLower letters in text= {percent_lower}%'
 
 
 if __name__ == '__main__':

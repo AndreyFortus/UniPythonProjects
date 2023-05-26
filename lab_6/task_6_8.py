@@ -10,7 +10,7 @@ def chapters_list():
         pattern = r"CHAPTER [IVX]+—[A-Z ]+"
         chapters = re.findall(pattern, text)
 
-        for chapter in chapters:
+        for _ in chapters:
             list_chapters.write(f'chapter \n')
 
 
