@@ -78,7 +78,7 @@ def test_money():
         assert actual == expected
 
 
-def test_chess_positive():
+def test_chess():
     with mock.patch('builtins.input', return_value='f7'):
         actual = chess()
         expected = 'square is white'
