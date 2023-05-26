@@ -10,12 +10,8 @@ def separate_text():
     return re.split(pattern, text)
 
 
-def main():
+if __name__ == '__main__':
     i = 1
     for sentence in separate_text():
         print(f'Sentence {i}: {sentence}')
         i += 1
-
-
-if __name__ == '__main__':
-    main()

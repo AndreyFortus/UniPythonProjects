@@ -19,9 +19,5 @@ def find_year():
         print(f'Year: {year}, row: {line_number}')
 
 
-def main():
-    find_year()
-
-
 if __name__ == '__main__':
-    main()
+    find_year()
