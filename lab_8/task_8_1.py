@@ -1,11 +1,11 @@
 def users(users_list):
-    if not users_list:
-        print('We need to find some users!')
-    else:
+    if users_list:
         for user in users_list:
             welcome_text = 'Hello Admin, I hope you\'re well.' if user == 'Admin' else \
                 f'Hello {user} thank you for logging in again.'
             print(welcome_text)
+    else:
+        print('We need to find some users!')
 
 
 if __name__ == '__main__':

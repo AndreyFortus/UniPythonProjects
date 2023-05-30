@@ -14,7 +14,8 @@ def month_check():
             return f'in {month} {month_dict[month]} days'
         if month.lower() == 'february':
             year = int(input('Input year: '))
-            return year_check(year)
+            return f'in {month} 28 days' if year_check(year) == 'Ordinary year' \
+                else f'in {month} 29 days'
 
 
 if __name__ == '__main__':

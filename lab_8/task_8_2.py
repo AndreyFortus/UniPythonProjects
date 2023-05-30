@@ -1,11 +1,8 @@
-
-
 def figure(sides):
-    list_figures = ['triangle', 'square', 'pentagon', 'hexagon']
-    if 6 > sides or sides > 3:
-        for i, _ in enumerate(list_figures):
-            if sides == i + 3:
-                return f'The figure with {sides} sides is {list_figures[i]}'
+    figures_dict = {3: 'triangle', 4: 'square', 5: 'pentagon', 6: 'hexagon'}
+    if 6 >= sides >= 3:
+        if sides in figures_dict:
+            return f'The figure with {sides} sides is {figures_dict[sides]}'
     return 'for the correct operation of the program, the number of sides must be 3-6'
 
 

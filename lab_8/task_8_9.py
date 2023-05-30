@@ -1,5 +1,4 @@
 def money():
-
     money_dict = {
         1: 'Volodimir The Great',
         2: 'Yaroslav the Wise',
@@ -11,13 +10,11 @@ def money():
         200: 'Lesia Ukrainka',
         500: 'Hryhorii Skovoroda',
         1000: 'Volodymyr Vernadskyi'
-
     }
 
     nominal = int(input('Input nominal: '))
     if nominal in money_dict:
         return f'{money_dict[nominal]} is depicted on {nominal} hryvnias'
-
     return 'Nominal not found. Try another'
 
 
