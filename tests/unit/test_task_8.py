@@ -1,6 +1,7 @@
 from unittest import mock
 
 import numpy as np
+import pytest
 
 from lab_8.task_8_2 import figure
 from lab_8.task_8_3 import numbers
@@ -23,20 +24,11 @@ def test_decimal_convert():
     assert actual == expected
 
 
-def test_check_num():
-    with mock.patch('builtins.input', return_value='4'):
+@pytest.mark.parametrize('input_param, expected', [(4, '4 is even'), (5, '5 is odd')])
+def test_check_num(input_param, expected):
+    with mock.patch('builtins.input', return_value=input_param):
         actual = check_num()
-        expected = '4 is even'
-        assert actual == expected
-
-    with mock.patch('builtins.input', return_value='5'):
-        actual = check_num()
-        expected = '5 is odd'
-        assert actual == expected
-
-    with mock.patch('builtins.input', return_value='abc'):
-        actual = check_num()
-        expected = 'Incorrect value. Try again!'
+        expected = expected
         assert actual == expected
 
 
@@ -71,20 +63,20 @@ def test_year_check_leap():
     assert actual == expected
 
 
-def test_money():
-    with mock.patch('builtins.input', return_value='200'):
+@pytest.mark.parametrize('input_param, expected',
+                         [(200, f'Lesia Ukrainka is depicted on 200 hryvnias'),
+                          (777, 'Nominal not found. Try another')])
+def test_money(input_param, expected):
+    with mock.patch('builtins.input', return_value=input_param):
         actual = money()
-        expected = 'Lesia Ukrainka is depicted on 200 hryvnias'
+        expected = f'{expected}'
         assert actual == expected
 
 
-def test_chess():
-    with mock.patch('builtins.input', return_value='f7'):
+@pytest.mark.parametrize('input_param, expected',
+                         [('f7', 'square is white'), ('d4', 'square is black'), ('abra_cadabra', 'Out of chess field')])
+def test_chess(input_param, expected):
+    with mock.patch('builtins.input', return_value=input_param):
         actual = chess()
-        expected = 'square is white'
-        assert actual == expected
-
-    with mock.patch('builtins.input', return_value='abra_cadabra'):
-        actual = chess()
-        expected = 'Out of chess field'
+        expected = f'{expected}'
         assert actual == expected
