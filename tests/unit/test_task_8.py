@@ -3,13 +3,29 @@ from unittest import mock
 import numpy as np
 import pytest
 
+from lab_8.task_8_1 import users
 from lab_8.task_8_2 import figure
 from lab_8.task_8_3 import numbers
 from lab_8.task_8_4 import check_num
+from lab_8.task_8_5 import month_check
 from lab_8.task_8_6 import year_check
+from lab_8.task_8_7 import count_numbers
+from lab_8.task_8_8 import calculator
 from lab_8.task_8_9 import money
 from lab_8.task_8_10 import chess
 from lab_8.task_8_11 import decimal_convert, binary_convert
+from lab_8.task_8_12 import game
+
+
+def test_users():
+    input_param = ['Alex', 'John', 'Dan', 'Admin', '123_TeSt_321']
+    actual = users(input_param)
+    expected = ['Hello Alex thank you for logging in again.',
+                'Hello John thank you for logging in again.',
+                'Hello Dan thank you for logging in again.',
+                'Hello Admin, I hope you\'re well.',
+                'Hello 123_TeSt_321 thank you for logging in again.']
+    assert actual == expected
 
 
 def test_binary_convert():
@@ -71,4 +87,48 @@ def test_chess(input_param, expected):
     with mock.patch('builtins.input', return_value=input_param):
         actual = chess()
         expected = f'{expected}'
+        assert actual == expected
+
+
+@pytest.mark.parametrize('input_param, expected',
+                         [([12, 23, 0], 35), ([50, -50, 25, 0], 25)])
+def test_count_numbers(monkeypatch, input_param, expected):
+    with mock.patch('builtins.input', return_value=input_param):
+        inputs = iter(input_param)
+        monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+        actual = count_numbers()
+        expected = expected
+        assert actual == expected
+
+
+@pytest.mark.parametrize('input_param, expected',
+                         [([3, 4, '+'], 'answer = 7.0'), ([5, 5, '/'], 'answer = 1.0'),
+                          ([25, 0, '/'], 'Divided by zero!'), ([5, 5, '+/'], 'Error!')])
+def test_calculator(monkeypatch, input_param, expected):
+    with mock.patch('builtins.input', return_value=input_param):
+        inputs = iter(input_param)
+        monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+        actual = calculator()
+        expected = expected
+        assert actual == expected
+
+
+@pytest.mark.parametrize('input_param, expected',
+                         [(['september'], 'in september 30 days'), (['december'], 'in december 31 days'),
+                          (['february', 1977], 'in february 28 days'), (['february', 2004], 'in february 29 days')])
+def test_month_check(monkeypatch, input_param, expected):
+    with mock.patch('builtins.input', return_value=input_param):
+        inputs = iter(input_param)
+        monkeypatch.setattr('builtins.input', lambda _: next(inputs))
+        actual = month_check()
+        expected = expected
+        assert actual == expected
+
+
+expected_value_game = 'It\'s a tie!' or 'Congratulations! You win!' or 'Sorry, you lose!'
+@pytest.mark.parametrize('input_param, expected', [(1, expected_value_game)])
+def test_game(input_param, expected):
+    with mock.patch('builtins.input', return_value=input_param):
+        actual = game()
+        expected = expected
         assert actual == expected

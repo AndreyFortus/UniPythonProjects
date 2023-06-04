@@ -1,4 +1,4 @@
-from task_8_6 import year_check
+from lab_8.task_8_6 import year_check
 
 
 def month_check():

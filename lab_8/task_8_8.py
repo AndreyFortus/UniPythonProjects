@@ -16,8 +16,6 @@ def calculator():
         if operation in ops:
             return f'answer = {ops[operation](num_1, num_2)}'
 
-    except ValueError:
-        return 'Incorrect value!'
     except ZeroDivisionError:
         return 'Divided by zero!'
     return 'Error!'
