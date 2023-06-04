@@ -32,15 +32,11 @@ def test_check_num(input_param, expected):
         assert actual == expected
 
 
-def test_figure_positive():
-    actual = figure(3)
-    expected = 'The figure with 3 sides is triangle'
-    assert actual == expected
-
-
-def test_figure_negative():
-    actual = figure(8)
-    expected = 'for the correct operation of the program, the number of sides must be 3-6'
+@pytest.mark.parametrize('input_param, expected', [(3, 'The figure with 3 sides is triangle'),
+                                                   (8, 'for the correct operation of the program, the number of sides must be 3-6')])
+def test_figure(input_param, expected):
+    actual = figure(input_param)
+    expected = expected
     assert actual == expected
 
 
@@ -51,15 +47,10 @@ def test_numbers():
     assert actual == expected
 
 
-def test_year_check_ord():
-    actual = year_check(2012)
-    expected = 'Leap year'
-    assert actual == expected
-
-
-def test_year_check_leap():
-    actual = year_check(2037)
-    expected = 'Ordinary year'
+@pytest.mark.parametrize('input_param, expected', [(2012, 'Leap year'), (2037, 'Ordinary year')])
+def test_year_check_ord(input_param, expected):
+    actual = year_check(input_param)
+    expected = expected
     assert actual == expected
 
 
@@ -74,7 +65,8 @@ def test_money(input_param, expected):
 
 
 @pytest.mark.parametrize('input_param, expected',
-                         [('f7', 'square is white'), ('d4', 'square is black'), ('abra_cadabra', 'Out of chess field')])
+                         [('f7', 'square is white'), ('d4', 'square is black'),
+                          ('abra_cadabra', 'Out of chess field')])
 def test_chess(input_param, expected):
     with mock.patch('builtins.input', return_value=input_param):
         actual = chess()
