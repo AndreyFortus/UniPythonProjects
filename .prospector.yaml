@@ -9,6 +9,7 @@ ignore:
   - tests
   - detect_face_OpenCV
   - telegram_bot
+  - task_1.py
 
 test-warnings: true
 

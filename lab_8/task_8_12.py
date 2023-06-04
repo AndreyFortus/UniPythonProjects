@@ -24,7 +24,7 @@ def game():
 
     if player_choice == computer_choice:
         return 'It\'s a tie!'
-    elif win_comb:
+    if win_comb:
         return 'Congratulations! You win!'
     return 'Sorry, you lose!'
 

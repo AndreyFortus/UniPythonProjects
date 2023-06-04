@@ -5,8 +5,7 @@ def users(users_list):
             welcome_list.append('Hello Admin, I hope you\'re well.' if user == 'Admin' else
                                 f'Hello {user} thank you for logging in again.')
         return welcome_list
-    else:
-        print('We need to find some users!')
+    return 'We need to find some users!'
 
 
 if __name__ == '__main__':
