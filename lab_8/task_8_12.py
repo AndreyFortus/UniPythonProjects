@@ -1,5 +1,6 @@
 import random
 
+
 def game():
 
     print('''Welcome to Rock, Paper, Scissors!
