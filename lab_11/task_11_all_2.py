@@ -8,7 +8,12 @@ def find_year():
         lines = file.readlines()
 
     pattern = r'\b\d{3,4}\b'
-    years_list = [(int(year), i + 1) for year in re.findall(pattern, line) for i, line in enumerate(lines)]
+    years_list = []
+
+    for i, line in enumerate(lines):
+        matches = re.findall(pattern, line)
+        for year in matches:
+            years_list.append((int(year), i + 1))
 
     for year, line_number in years_list:
         print(f'Year: {year}, row: {line_number}')
