@@ -6,8 +6,10 @@ ignore:
   - ^build/
   - venv
   - gui_race_game
+  - tests
   - detect_face_OpenCV
   - telegram_bot
+  - task_1.py
 
 test-warnings: true
 
@@ -43,3 +45,7 @@ pylint:
         - W3101
         # Override method
         - W0221
+        # Expression is assigned to nothing
+        - W0106
+        # Too many booleans
+        - R0916
